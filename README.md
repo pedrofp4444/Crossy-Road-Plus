@@ -52,7 +52,7 @@ $ git clone https://github.com/RuiL1904/Block-Knight.git
 #### Compiling
 
 ```bash
-$ cd Block-Knight/src
+$ cd Crossy-Road-Plus/src
 $ ghc Tarefa5_2021li1g033.hs
 ```
 
@@ -72,7 +72,7 @@ You can open the interpreter Haskell (GHCi) using the cabal or directly.
 $ cabal repl
 ```
 
-2. UUsing `GHCi`
+2. Using `GHCi`
 
 ```bash
 $ ghci -i="src" -i="tests" src/Main.hs
@@ -99,7 +99,7 @@ $ haddock -h -o doc/html src/*.hs
 In case you get a mpv error, you'll need to install it (since It was used to play audio inside the game).
 Follow the instructions here: [mpv.io/installation](https://mpv.io/installation/)
 
-## Grupo 10
+## Group 10
 
 - **A104082** Pedro Figueiredo Pereira;
 - **A104096** Jorge Ubaldo Rodrigues Ferreira;
