@@ -46,21 +46,21 @@ $ cabal install --lib gloss
 #### Cloning the repository
 
 ```bash
-$ git clone https://github.com/RuiL1904/Block-Knight.git
+$ git clone https://github.com/pedrofp4444/Crossy-Road-Plus.git
 ```
 
 #### Compiling
 
 ```bash
 $ cd Crossy-Road-Plus/src
-$ ghc Tarefa5_2021li1g033.hs
+$ ghc Main.hs
 ```
 
 #### Running
 
 ```bash
 $ cd ..
-$ ./src/Tarefa5_2021li1g033
+$ ./src/Main
 ```
 ## Interpreter
 
