@@ -1,116 +1,35 @@
-# Laboratórios de Informática I
-
-## Repositório
-
-Se tiver chave SSH configurada no GitLab pode fazer clone com o seguinte link:
-
-```bash
-$ git clone git@gitlab.com:uminho-di/li1/2223/2022li1g010.git
-$ cd 2022li1g010
-```
-
-Alternativamente, pode fazer clone por https com o seguinte link:
-
-```bash
-$ git clone https://gitlab.com/uminho-di/li1/2223/projetos/2022li1g010.git
-$ cd 2022li1g010
-```
-
-## Interpretador
-
-Pode abrir o interpretador do Haskell (GHCi) utilizando o cabal ou diretamente.
-
-1. Usando o cabal
-
-```bash
-$ cabal repl
-```
-
-2. Usando o GHCi
-
-```bash
-$ ghci -i="src" -i="tests" src/Main.hs
-```
-
-## Testes
-
-O projecto utiliza a biblioteca [HUnit](https://hackage.haskell.org/package/HUnit) para fazer testes unitários.
-
-Pode correr os testes utilizando uma das seguintes alternativas:
-
-1. Usando o `cabal`
-
-```bash
-$ cabal test
-```
-
-2. Usando o GHCi
-
-```bash
-$ ghci -i="src" -i="tests" tests/Spec.hs
->>> runTestsT1 -- Correr os testes tarefa 1
->>> runTestsT2 -- Correr os testes tarefa 2
->>> runTestsT3 -- Correr os testes tarefa 3
->>> runTestsT4 -- Correr os testes tarefa 4
->>> main -- Correr todos os testes
-```
-
-3. Usando o wrapper `runhaskell`
-
-```bash
-$ runhaskell -i="src" -i="tests" tests/Spec.hs
-```
-
-## Documentação
-
-Pode gerar a documentação com o [Haddock](https://haskell-haddock.readthedocs.io/).
-
-1. Usando o `cabal`
-
-```bash
-$ cabal haddock --haddock-all
-```
-
-2. Usando diretamente o `haddock`
-
-```bash
-$ haddock -h -o doc/html src/*.hs
-```
-
-## Grupo 10
-
-- **A104082** Pedro Figueiredo Pereira;
-- **A104096** Jorge Ubaldo Rodrigues Ferreira;
-
-# Block Knight
+# Crossy Road +
 
 ## Software Labs I | Laboratórios de Informática I
-## Grade: 18/20 :star:
+## Grade: --/20 :star:
 
 This game was developed during the first semester of the Software Engineering degree @ University of Minho. The full process of development was evaluated and established the final grade for the "Laboratórios de Informática I" subject.
 
-The project consisted of recreating the old game BlockDude, with the freedom to add features and completely change the graphical appearance, which was, in this case, heavily inspired by Hollow Knight.
+The project consisted of recreating the game Crossy Road, with the freedom to add features and completely change the graphical appearance, which was, in this case, fully design by us.
 
 It was fully developed in Haskell and consisted of 6 tasks:
 
 1. Verify if a given map is valid;
 
-2. Construct and destruct maps (from type "[(Peca, Coordenadas)]" to type "Mapa" and vice-versa);
+2. Generate a random map;
 
-3. Instantiate Show in order to display an output of the type "Jogo" as a String;
+3. Move the player on the map;
 
-4. Update the current game state according to the player movements;
+4. Determines when the game ends;
 
-5. Create and implement game graphics, using Gloss.
+5. Make the game slide;
 
-6. Create a game bot to solve, in the minimum necessary player movements, a map.
+6. Build all the graphical part of the game.
 
 ## Game gallery
 
-<img align = "center" width = 900px src = "https://github.com/RuiL1904/Block-Knight/blob/main/assets/mpJogar.jpg"/>
-<img align = "center" width = 900px src = "https://github.com/RuiL1904/Block-Knight/blob/main/assets/eBackground1.jpg"/>
-<img align = "center" width = 900px src = "https://github.com/RuiL1904/Block-Knight/blob/main/assets/mjMapa1.jpg"/>
-<img align = "center" width = 900px src = "https://github.com/RuiL1904/Block-Knight/blob/main/assets/playingMap.png"/>
+<img align = "center" width = 900px src = "https://github.com/pedrofp4444/Crossy-Road-Plus/blob/main/assets/img/front-page.png"/>
+<img align = "center" width = 900px src = "https://github.com/pedrofp4444/Crossy-Road-Plus/blob/main/assets/img/loja-skins.png"/>
+<img align = "center" width = 900px src = "https://github.com/pedrofp4444/Crossy-Road-Plus/blob/main/assets/img/loja-mapas.png"/>
+<img align = "center" width = 900px src = "https://github.com/pedrofp4444/Crossy-Road-Plus/blob/main/assets/img/single.png"/>
+<img align = "center" width = 900px src = "https://github.com/pedrofp4444/Crossy-Road-Plus/blob/main/assets/img/multi.png"/>
+<img align = "center" width = 900px src = "https://github.com/pedrofp4444/Crossy-Road-Plus/blob/main/assets/img/niveis.png"/>
+<img align = "center" width = 900px src = "https://github.com/pedrofp4444/Crossy-Road-Plus/blob/main/assets/img/ajuda.png"/>
 
 ## Installing and running the game
 
@@ -143,33 +62,36 @@ $ ghc Tarefa5_2021li1g033.hs
 $ cd ..
 $ ./src/Tarefa5_2021li1g033
 ```
-## Arch-based distros
-Since arch is not that good working with cabal, I recommend you to use stack (you can install it with pacman).
-Finally, since the graphical interface of the game was developed using the Gloss library, you'll need to install it:
+## Interpreter
+
+You can open the interpreter Haskell (GHCi) using the cabal or directly.
+
+1. Using `cabal`
 
 ```bash
-$ stack upgrade
-$ stack install gloss
-$ stack install gloss-juicy
+$ cabal repl
 ```
 
-#### Cloning the repository
+2. UUsing `GHCi`
 
 ```bash
-$ git clone https://github.com/pedrofp4444/Crossy-Road-Plus
-```
-#### Compiling
-
-```bash
-$ cd Block-Knight/src
-$ stack ghc --package gloss Main.hs
+$ ghci -i="src" -i="tests" src/Main.hs
 ```
 
-#### Running
+## Documentation
+
+You can generate documentation with the [Haddock](https://haskell-haddock.readthedocs.io/).
+
+1. Using `cabal`
 
 ```bash
-$ cd ..
-$ ./src/Tarefa5_2021li1g033
+$ cabal haddock --haddock-all
+```
+
+2. Using directly `haddock`
+
+```bash
+$ haddock -h -o doc/html src/*.hs
 ```
 
 ## Possible problems
